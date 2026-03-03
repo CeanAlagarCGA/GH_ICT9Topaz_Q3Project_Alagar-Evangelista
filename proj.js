@@ -1,13 +1,3 @@
-
-
-const profileInput = document.getElementById('profile');
-const profilePreview = document.getElementById('profilePreview');
-
-profilePreview.onclick = () => profileInput.click();
-
-profileInput.onchange = e => e.target.files[0] && (profilePreview.src = URL.createObjectURL(e.target.files[0]));
-
-
 const stations = [
     "Baclaran Station",
     "Monumento",
@@ -61,4 +51,15 @@ function calculateFare() {
     document.getElementById("result").innerHTML =
         "Distance: " + distance + " km<br>" +
         "Total Fare: &#8369;" + totalFare.toFixed(2);
+
 }
+
+
+
+const profileInput = document.getElementById('profile');
+const profilePreview = document.getElementById('profilePreview');
+
+profilePreview.onclick = () => profileInput.click();
+
+profileInput.onchange = e => e.target.files[0] && (profilePreview.src = URL.createObjectURL(e.target.files[0]));
+
