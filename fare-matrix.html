@@ -158,11 +158,18 @@
     <p>9-Topaz</p>
 </footer>
 
-<script src="proj.js"></script>
+        <script>     
+            const profileInput = document.getElementById('profile');
+            const profilePreview = document.getElementById('profilePreview');
+
+            profilePreview.onclick = () => profileInput.click();
+            profileInput.onchange = e => e.target.files[0] && (profilePreview.src = URL.createObjectURL(e.target.files[0]));
+        </script>
    
 
     
 </script>
 
 </body>
+
 </html>
